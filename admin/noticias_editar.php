@@ -5,7 +5,6 @@ if (!isset($_SESSION['usuario_logueado']))
     header("location:index.php");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,6 +15,7 @@ if (!isset($_SESSION['usuario_logueado']))
     <link href="../lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="../lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
@@ -32,22 +32,21 @@ if (!isset($_SESSION['usuario_logueado']))
             or die("No se puede conectar con el servidor");
         mysqli_select_db($conexion, $base_db)
             or die("No se puede seleccionar la base de datos");
-        $instruccion = "SELECT * FROM noticias WHERE id_noticia='$id_noticia'";
-        $consulta = mysqli_query($conexion,$instruccion) or die("no pudo consultar");
-        $resultado = mysqli_fetch_array($consulta);
-        
-     
-            if(isset($mensaje)){
-            print("<h3 style='color:#cc00ff'>".$mensaje."</h3>");
-            }
-        ?>
+        $instruccion="select * from noticias where id_noticia=$id_noticia";
+        $consulta=mysqli_query($conexion,$instruccion) or die("no pudo consultar");
+        $resultado=mysqli_fetch_array($consulta);
        
+        if(isset($mensaje))
+        print("<h3 style='color:#cc00ff'>".$mensaje."</h3>");
+        mysqli_close($conexion);
+        ?>
         
-        <form action="noticias_editar_guardar.php" method="post" enctype="multipart?form-data">
+            
+      
+        <form action="noticias_editar_guardar.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="titulo" class="form-label">Título</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese un título"
-                    required value="<?php print($resultado['titulo']);?>">
+                <label for="titulo" class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="titulo" required value="<?php print($resultado['titulo']);?>">
             </div>
             <div class="mb-3">
                 <label for="copete" class="form-label">Copete</label>
@@ -55,39 +54,45 @@ if (!isset($_SESSION['usuario_logueado']))
             </div>
             <div class="mb-3">
                 <label for="cuerpo" class="form-label">cuerpo</label>
-                <textarea rows="10" type="cuerpo" class="form-control" id="cuerpo" name="cuerpo" required value="<?php print($resultado['cuerpo']);?>"></textarea>
+                <textarea rows="10" class="form-control" id="cuerpo" name="cuerpo" required><?php print($resultado['cuerpo']);?></textarea>
             </div>
             <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen</label>
-                <input type="file" class="form-control" id="imagen" name="imagen">
-                <img src="../imagenes_subidas/"<?php print($resultado['imagen']);?> width="80px">
+                <input type="file" class="form-control" id="imagen" name="imagen"></input>
+                <img src="../imagenes_subidas/<?php print($resultado['imagen']);?>" width="80px">
             </div>
             <div class="mb-3">
-                <label for="categoria" class="form-label">Categoría</label>
-                <select class="form-control" id="categoria" name="categoria" required value="">
-                    <option value="deportes" <?php if($resultado['categoria']=="Deportes") print("selected");?>>Deportes</option>
-                    <option value="moda" <?php if($resultado['categoria']=="Moda") print("selected");?>>Moda</option>
+                <label for="categoria" class="form-label">Categoria</label>
+                <select class="form-control" id="categoria" name="categoria" required>
+                    <option value="Deportes" <?php if($resultado['categoria']=="Deportes") print("selected");?>>Deportes</option>
+                    <option value="Moda" <?php if($resultado['categoria']=="Moda") print("selected");?>>Moda</option>
                     <option value="Sociales" <?php if($resultado['categoria']=="Sociales") print("selected");?>>Sociales</option>
+                </select>
             </div>
             <div class="mb-3">
-                <input type="hidden" name="imagencita" value="<?php print($resultado['imagen']);?>">
+            <input type="hidden" name="imagencita" value="<?php print($resultado['imagen']);?>">
                 <input type="hidden" name="id_noticia" value="<?php print($resultado['id_noticia']);?>">
-                <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="Guardar">
+                <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="GUARDAR">
                 <a href="noticias.php" class="btn btn-info">Regresar</a>
             </div>
+
+
         </form>
 
+
+
     </div>
+
     <div id="librerias">
         <script>
-            $(document).ready(function () {
+            $(document).ready(function() {
                 $('#cuerpo').summernote({
                     height: 200
                 });
             });
         </script>
-    </div>
 
+    </div>
 </body>
 
 </html>
