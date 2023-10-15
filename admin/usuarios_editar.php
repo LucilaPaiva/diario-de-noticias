@@ -25,7 +25,7 @@ if (!isset($_SESSION['usuario_logueado']))
 <body>
     <div class="container">
         <?php require("menu.php"); ?>
-        <h1>Noticias Editar</h1>
+        <h1>Usuarios Editar</h1>
         <?php
         require("conexion.php");
         $conexion = mysqli_connect($server_db, $usuario_db, $password_db)
@@ -43,7 +43,7 @@ if (!isset($_SESSION['usuario_logueado']))
         
             
       
-        <form action="usuarios_nueva_guardar.php" method="post" enctype="multipart/form-data">
+        <form action="usuarios.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre" required value="<?php print($resultado['nombre']);?>">
@@ -54,27 +54,23 @@ if (!isset($_SESSION['usuario_logueado']))
             </div>
             <div class="mb-3">
                 <label for="usuario" class="form-label">Usuario</label>
-                <input rows="10" class="form-control" id="usuario" name="usuario" required><?php print($resultado['usuario']);?>
+                <input rows="10" class="form-control" id="usuario" name="usuario" required value="<?php print($resultado['usuario']);?>">
             </div>
 
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input rows="10" class="form-control" id="password" name="password" required><?php print($resultado['password']);?>
+                <input rows="10" class="form-control" id="password" name="password" required value="<?php print($resultado['password']);?>">
             </div>
             <div class="mb-3">
                 <label for="fecha" class="form-label">Fecha</label>
-                <input rows="10" class="form-control" id="fecha" name="fecha" required><?php print($resultado['fecha']);?>
+                <input rows="10" class="form-control" id="fecha" name="fecha" required value="<?php print($resultado['fecha']);?>">
             </div>
             <div class="mb-3">
                 <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="Guardar">
+
                 <a href="usuarios.php" class="btn btn-info">Regresar</a>
             </div>
-
-
         </form>
-
-
-
     </div>
 
 </body>

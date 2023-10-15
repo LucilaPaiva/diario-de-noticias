@@ -17,7 +17,7 @@ if (!isset($_SESSION['usuario_logueado']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link href="../lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+    
 
 
 </head>
@@ -27,6 +27,8 @@ if (!isset($_SESSION['usuario_logueado']))
         <?php require("menu.php");?>
     </div>
 
+    
+    <script src="../lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
