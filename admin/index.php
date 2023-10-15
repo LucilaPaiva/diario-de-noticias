@@ -28,10 +28,7 @@
                         print("<p>".$_SESSION['mensaje']."</p>");
                         unset($_SESSION['mensaje']);
                     }
-                    // if(isset($mensaje))
-                    // {
-                    //     print("<p>".$mensaje."</p>");
-                    // }
+                    
                 ?>
 
             <form action="login.php" method="post">
