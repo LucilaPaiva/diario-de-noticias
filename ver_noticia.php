@@ -12,7 +12,7 @@
 
 <body>
     <div class="container-fluid">
-        <?php // require("menu.php"); 
+        <?php // require("menu.php");
         ?>
         <h1>Noticias</h1>
 
@@ -37,9 +37,10 @@
                 <div class="card">
                 <img src="imagenes_subidas/'.$resultado['imagen'].'" class="card-img-top" alt="'.$resultado['titulo'].'">
                     <div class="card-body">
-                            <h5 class="card-title">'.$resultado['titulo'].'</h5>
-                        <p class="card-text">'.substr($resultado['copete'],0,40).'</p>
-                        <a href="javascript:history.back()" class="btn btn-primary">Go somewhere</a>
+                            <h2 class="card-title">'.$resultado['titulo'].'</h2>
+                        <h2 class="card-text">'.substr($resultado['copete'],0,100).'</h2>
+                        <p class="card-text">'.substr($resultado['copete'],0,500).'</p>
+                        <a href="javascript:history.back()" class="btn btn-primary">Volver</a>
                     </div>
                  </div>
             </div>

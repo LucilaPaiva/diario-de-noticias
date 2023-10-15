@@ -11,7 +11,7 @@
         or die("No se puede seleccionar la base de datos");
 
     $instruccion="delete from noticias where id_noticia='$id_noticia'";
-    unlink("../imagenes_subidas/".$imagen);
+    unlink("imagenes_subidas/".$imagen);
     $consulta=mysqli_query($conexion,$instruccion);
            
         mysqli_close($conexion);

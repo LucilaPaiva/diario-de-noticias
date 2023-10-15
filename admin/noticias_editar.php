@@ -35,6 +35,7 @@ if (!isset($_SESSION['usuario_logueado']))
         $instruccion="select * from noticias where id_noticia=$id_noticia";
         $consulta=mysqli_query($conexion,$instruccion) or die("no pudo consultar");
         $resultado=mysqli_fetch_array($consulta);
+        
        
         if(isset($mensaje))
         print("<h3 style='color:#cc00ff'>".$mensaje."</h3>");
@@ -59,7 +60,7 @@ if (!isset($_SESSION['usuario_logueado']))
             <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen</label>
                 <input type="file" class="form-control" id="imagen" name="imagen"></input>
-                <img src="../imagenes_subidas/<?php print($resultado['imagen']);?>" width="80px">
+                <img src="imagenes_subidas/<?php print($resultado['imagen']);?>" width="80px">
             </div>
             <div class="mb-3">
                 <label for="categoria" class="form-label">Categoria</label>
