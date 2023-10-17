@@ -26,7 +26,7 @@ if (!isset($_SESSION['usuario_logueado']))
         if (isset($mensaje))
             print("<h3 style='color:#cc00ff'>" . $mensaje . "</h3>");
         ?>
-        <a href="usuarios_nueva.php" class="btn btn-primary">Nuevo Usuario</a>
+        <a href="usuarios_nueva.php" class="btn btn-secondary  my-button-nueva">Nuevo Usuario</a>
     </div>
     <table class="table">
         <tr>

@@ -9,7 +9,7 @@ if (!isset($_SESSION['usuario_logueado']))
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link href="../lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@ if (!isset($_SESSION['usuario_logueado']))
 <body>
     <div class="container">
         <?php require("menu.php"); ?>
-        <h1>Noticias Nueva</h1>
+        <h1>Realizar una nueva noticia</h1>
 
         <form action="noticias_nueva_guardar.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">

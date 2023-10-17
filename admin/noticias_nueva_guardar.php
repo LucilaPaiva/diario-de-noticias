@@ -19,9 +19,9 @@
     $copiarArchivo=false;
     if(is_uploaded_file($_FILES['imagen']['tmp_name']))
     {
-        $nombreDirectorio="imagenes_subidas/";
+        $nombreDirectorio="../imagenes_subidas/";
         $idUnico=time();
-        $nombrefichero=$idUnico. "-" .$_FILES['imagen']['name'];
+        $nombrefichero=$idUnico. "-" .$_FILES['imagen']['name']; 
         $copiarArchivo=true;
     }
         else 

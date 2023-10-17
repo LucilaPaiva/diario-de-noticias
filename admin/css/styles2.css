@@ -1,0 +1,28 @@
+.nav{
+    padding: 3%;
+    padding-left: 6%;
+}
+
+.item{
+    background-color: rgb(221, 217, 217);
+}
+.my-nav-item{
+    color: rgb(168, 45, 131);
+    /* font-size: 1%; */
+    font-weight: bold;
+}
+
+.container-imagen{
+    background-image: url('../../images/59892.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 9%;
+    
+}
+
+/* ******noticias.php *********** */
+.my-button-nueva{
+    margin: 1.2%;
+    padding: 1.2%;
+}

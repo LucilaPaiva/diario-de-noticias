@@ -19,6 +19,7 @@ if (!isset($_SESSION['usuario_logueado']))
     <title>Admin</title>
     <link href="../lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="../lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles2.css"> 
     
 
 
@@ -33,7 +34,7 @@ if (!isset($_SESSION['usuario_logueado']))
             print("<h3 style='color:#cc00ff'>" . $mensaje . "</h3>");
         }
         ?>
-        <a href="noticias_nueva.php" class="btn btn-primary">Nueva Noticia</a>
+        <a href="noticias_nueva.php" class="btn btn-secondary my-button-nueva">Nueva Noticia</a>
     </div>
     <table class="table">
         <tr>

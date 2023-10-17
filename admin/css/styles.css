@@ -1,0 +1,75 @@
+
+
+body {
+    background-color: #d8dadb;
+    padding: 50px;
+}
+
+/* ***************** el index principal ********************** */
+.my-header{
+    background-image: url('../../images/9411842.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4%;
+    margin:1%;
+    
+}
+
+.my-titulo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.my-h2{
+    color:rgb(138, 135, 135);
+    font-family: cursive;
+    padding: 1%;
+    
+}
+
+/* ******************* Navbar************************* */
+.my-navbar{
+    background-color:  #d8dadb;
+    padding: 2%;
+    
+}
+
+.my-navbar-container{
+    width: 50%;
+    background-color: rgb(196, 191, 191);
+    font-size: 0,8%;
+}
+
+/* *********** Archivos del formulario de registro ***********/
+.container {
+    max-width: 70%;
+    margin: auto;
+    background-color: #ada6a6;
+    padding: 10%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario-container {
+    background-image: url('../../images/59892.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat;
+    padding: 30px;  */
+}
+
+
+
+.form-label {
+    font-weight: bold;
+}
+
+
+
+
+
