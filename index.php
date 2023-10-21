@@ -24,7 +24,7 @@
 
     <nav class="navbar my-navbar navbar-expand-lg ">
         <div class="container-fluid my-navbar-container">
-            <a class="navbar-brand" href="#">Salud</a>
+            <a class="navbar-brand" href="https://www.gba.gob.ar/saludprovincia/noticias">Salud</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,13 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Deporte</a>
+                        <a class="nav-link" href="https://www.elmundo.es/deportes.html">El mundo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">El mundo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Competencias</a>
+                        <a class="nav-link" href="https://www.infobae.com/america/agencias/2023/10/21/ilic-dice-que-chile-es-el-punto-de-encuentro-de-las-americas-con-los-panamericanos-2023/">Competencias</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true">Actualidad</a>
