@@ -24,6 +24,6 @@ Este proyecto es un diario de noticias desarrollado en PHP que ofrece una plataf
 
 Este proyecto es el módulo IV: Pgoramación backend (inicial), de Desarrollador Full stack de Argentina Programa 4.0
 
-![gift]([C:\Users\Lucila\Desktop\olimpiadas-07.gif](https://www.gifss.com/deportes/olimpiadas/images/olimpiadas-07.gif)https://www.gifss.com/deportes/olimpiadas/images/olimpiadas-07.gif)
+![gift]([[C:\Users\Lucila\Desktop\olimpiadas-07.gif](https://www.gifss.com/deportes/olimpiadas/images/olimpiadas-07.gif)https://www.gifss.com/deportes/olimpiadas/images/olimpiadas-07.gif](https://gifsanimados.de/img-gifsanimados.de/d/deportes/badminton-22.gif)https://gifsanimados.de/img-gifsanimados.de/d/deportes/badminton-22.gif)
 
  
