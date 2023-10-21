@@ -16,6 +16,7 @@
     $password=mysqli_real_escape_string($conexion,$password);
     $nombre=mysqli_real_escape_string($conexion,$nombre);
     $apellido=mysqli_real_escape_string($conexion,$apellido);
+    $fecha=mysqli_real_escape_string($conexion,$fecha);
    
 
     //incriptar password
@@ -24,10 +25,11 @@
     print($salt);
     
     $clave_crypt = crypt ($password, $salt);
-    $instruccion="insert into usuarios (nombre,apellido,usuario,password) values ('$nombre','$apellido','$usuario','$clave_crypt')";
+    $instruccion="insert into usuarios (nombre,apellido,usuario,password,fecha) values ('$nombre','$apellido','$usuario','$clave_crypt','$fecha')";
     $consulta=mysqli_query($conexion,$instruccion) 
             or die("no pudo insertar");
 
     mysqli_close($conexion);
+    header("location:usuarios.php?mensaje=USUARIO GUARDADO CON ÉXITO");
    
 ?> 

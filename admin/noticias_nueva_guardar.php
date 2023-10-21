@@ -31,12 +31,12 @@
              move_uploaded_file($_FILES['imagen']['tmp_name'],$nombreDirectorio.$nombrefichero);
     
     $instruccion="insert into noticias (titulo,copete,cuerpo,imagen,categoria,id_usuario,fecha) values ('$titulo','$copete','$cuerpo','$nombrefichero','$categoria','$id_usuario','$fecha')";
-    $consulta=mysqli_query($conexion,$instruccion) 
+    $consulta=mysqli_query($conexion,$instruccion)
             or die("no pudo insertar");
     //metodo 2
     /*$stmt=mysqli_prepare($conexion,"insert into noticias (titulo,copete,cuerpo,imagen,categoria,id_usuario,fecha) values (?,?,?,?,?,?,?)");
     mysqli_stmt_bind_param($stmt,'sssssds', $titulo,$copete,$cuerpo,$imagen,$categoria,$id_usuario,$fecha);
    mysqli_stmt_execute($stmt);*/
     mysqli_close($conexion);
-    header("location:noticias.php?mensaje=Guardo");
+    header("location:noticias.php?mensaje=Noticia Guardada con éxito");
 ?>

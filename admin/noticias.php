@@ -19,8 +19,8 @@ if (!isset($_SESSION['usuario_logueado']))
     <title>Admin</title>
     <link href="../lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="../lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/styles2.css"> 
-    
+    <link rel="stylesheet" type="text/css" href="css/styles2.css">
+
 
 
 </head>
@@ -39,6 +39,7 @@ if (!isset($_SESSION['usuario_logueado']))
     <table class="table">
         <tr>
             <th>titulo</th>
+            <th>Fecha</th>
             <th>copete</th>
             <th>editar</th>
             <th>borrar</th>
@@ -60,9 +61,13 @@ if (!isset($_SESSION['usuario_logueado']))
         $nfilas = mysqli_num_rows($consulta);
         for ($i = 0; $i < $nfilas; $i++) {
             $resultado = mysqli_fetch_array($consulta);
+            $inst2 = "select * from usuarios where id_usuario=" . $resultado['id_usuario'];
+            $consulta2 = mysqli_query($conexion, $inst2) or die("no puedo consultar");
+            $autor = mysqli_fetch_array($consulta2);
             print('
                 <tr>
                     <td>' . trim($resultado['titulo']) . '</td>
+                    <td>' . $resultado['fecha'] . '</td>
                     <td>' . substr($resultado['copete'], 0, 50) . '...</td>
                     <td><a href="noticias_editar.php?id_noticia=' . $resultado['id_noticia'] . '" class="btn btn-secondary">editar</a></td>
                     <td><a href="noticias_borrar.php?id_noticia=' . $resultado['id_noticia'] . '&imagen=' . $resultado['imagen'] . '" class="btn btn-danger" onclick="return confirm(&quot; Desea eliminar &quot;)">borrar<a/></td>
@@ -73,7 +78,7 @@ if (!isset($_SESSION['usuario_logueado']))
         mysqli_close($conexion);
         ?>
     </table>
-    
+
 
 </body>
 

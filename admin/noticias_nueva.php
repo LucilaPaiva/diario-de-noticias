@@ -32,6 +32,14 @@ if (!isset($_SESSION['usuario_logueado']))
                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="titulo" required>
             </div>
             <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" placeholder="fecha" required>
+            </div>
+            <!-- <div class="mb-3">
+                <label for="autor" class="form-label">Autor</label>
+                <input type="text" class="form-control" id="autor" name="autor" required>
+            </div> -->
+            <div class="mb-3">
                 <label for="copete" class="form-label">Copete</label>
                 <input type="text" class="form-control" id="copete" name="copete" required>
             </div>
@@ -44,7 +52,7 @@ if (!isset($_SESSION['usuario_logueado']))
                 <input  type="file" class="form-control" id="imagen" name="imagen" required></input>
             </div>
             <div class="mb-3">
-                <label for="categoria" class="form-label">Imagen</label>
+                <label for="categoria" class="form-label">Categoría</label>
                 <select class="form-control" id="categoria" name="categoria" required>
                     <option value="Deportes">Deportes</option>
                     <option value="Moda">Moda</option>
