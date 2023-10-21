@@ -22,7 +22,7 @@ Este proyecto es un diario de noticias desarrollado en PHP que ofrece una plataf
 
 ## Sobre el proyectop
 
-Este proyecto es el módulo IV: Pgoramación backend (inicial), de Desarrollador Full stack de Argentina Programa 4.0
+Este proyecto es el módulo IV: Programación backend (inicial), de Desarrollador Full stack de Argentina Programa 4.0
 
 ![gift](https://huilasports.com/wp-content/uploads/2018/11/gif-varios-deportes.gif)
 
