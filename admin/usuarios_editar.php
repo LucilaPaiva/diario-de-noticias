@@ -43,7 +43,7 @@ if (!isset($_SESSION['usuario_logueado']))
         
             
       
-        <form action="usuarios.php" method="post" enctype="multipart/form-data">
+        <form action="usuarios_editar_guardar.php" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre" required value="<?php print($resultado['nombre']);?>">
@@ -65,6 +65,8 @@ if (!isset($_SESSION['usuario_logueado']))
                 <label for="fecha" class="form-label">Fecha</label>
                 <input rows="10" class="form-control" id="fecha" name="fecha" required value="<?php print($resultado['fecha']);?>">
             </div>
+             <!-- Campo oculto -->
+                <input type="hidden" name="id_usuario" value="<?= $resultado['id_usuario'];?>">
             <div class="mb-3">
                 <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="Guardar">
 

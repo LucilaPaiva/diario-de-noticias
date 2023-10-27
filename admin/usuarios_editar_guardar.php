@@ -16,12 +16,10 @@
     $nombre=mysqli_real_escape_string($conexion,$nombre);
     $apellido=mysqli_real_escape_string($conexion,$apellido);
     $usuario=mysqli_real_escape_string($conexion,$usuario);
-
-
     $instruccion="update usuarios set nombre='$nombre',apellido='$apellido',usuario='$usuario' where id_usuario='$id_usuario'";
     $consulta=mysqli_query($conexion,$instruccion)
             or die("no pudo insertar");
 
         mysqli_close($conexion);
-        header("location:usuarios_editar.php?mensaje=Usuario editado&id_usuario=.$id_usuario");
+        header("location:usuarios.php?mensaje=Usuario editado&id_usuario=.$id_usuario");
     ?>
