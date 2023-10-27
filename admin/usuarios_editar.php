@@ -54,19 +54,20 @@ if (!isset($_SESSION['usuario_logueado']))
             </div>
             <div class="mb-3">
                 <label for="usuario" class="form-label">Usuario</label>
-                <input rows="10" class="form-control" id="usuario" name="usuario" required value="<?php print($resultado['usuario']);?>">
+                <input type="text" class="form-control" id="usuario" name="usuario" required value="<?php print($resultado['usuario']);?>">
             </div>
 
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input rows="10" class="form-control" id="password" name="password" required value="<?php print($resultado['password']);?>">
+                <input type="password" class="form-control" id="password" name="password" required value="<?php print($resultado['password']);?>">
             </div>
             <div class="mb-3">
                 <label for="fecha" class="form-label">Fecha</label>
-                <input rows="10" class="form-control" id="fecha" name="fecha" required value="<?php print($resultado['fecha']);?>">
+                <input type="date" class="form-control" id="fecha" name="fecha" required value="<?php print($resultado['fecha']);?>">
             </div>
-             <!-- Campo oculto -->
+            <!-- Campo oculto -->
                 <input type="hidden" name="id_usuario" value="<?= $resultado['id_usuario'];?>">
+                <?php print($resultado['id_usuario']);?>
             <div class="mb-3">
                 <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="Guardar">
 

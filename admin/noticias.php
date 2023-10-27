@@ -40,6 +40,7 @@ if (!isset($_SESSION['usuario_logueado']))
         <tr>
             <th>titulo</th>
             <th>Fecha</th>
+            <th>Autor</th>
             <th>copete</th>
             <th>editar</th>
             <th>borrar</th>
@@ -68,6 +69,7 @@ if (!isset($_SESSION['usuario_logueado']))
                 <tr>
                     <td>' . trim($resultado['titulo']) . '</td>
                     <td>' . $resultado['fecha'] . '</td>
+                    <td>' . $autor['nombre'] . ' ' . $autor['apellido'] . '</td>
                     <td>' . substr($resultado['copete'], 0, 50) . '...</td>
                     <td><a href="noticias_editar.php?id_noticia=' . $resultado['id_noticia'] . '" class="btn btn-secondary">editar</a></td>
                     <td><a href="noticias_borrar.php?id_noticia=' . $resultado['id_noticia'] . '&imagen=' . $resultado['imagen'] . '" class="btn btn-danger" onclick="return confirm(&quot; Desea eliminar &quot;)">borrar<a/></td>

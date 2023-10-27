@@ -11,7 +11,7 @@
         or die("No se puede seleccionar la base de datos");
         $fecha=date("Y-m-d");
         
-        $id_usuario=$_SESSION['id_usuario'];
+        //$id_usuario=$_SESSION['id_usuario'];
         //metodo I
     $nombre=mysqli_real_escape_string($conexion,$nombre);
     $apellido=mysqli_real_escape_string($conexion,$apellido);
@@ -21,5 +21,5 @@
             or die("no pudo insertar");
 
         mysqli_close($conexion);
-        header("location:usuarios.php?mensaje=Usuario editado&id_usuario=.$id_usuario");
+        header("location:usuarios.php?mensaje=Usuario editado&id_usuario=$id_usuario");
     ?>
