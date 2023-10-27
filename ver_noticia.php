@@ -33,20 +33,19 @@
         // for ($i = 0; $i < $nfilas; $i++) {
             $resultado = mysqli_fetch_array($consulta);
             print('
-            <div class="col-12">
-                <div class="card">
-                <img src="imagenes_subidas/'.$resultado['imagen'].'" class="card-img-top" alt="'.$resultado['titulo'].'">
-                    <div class="card-body">
+                <div class="">
+                    <div class="card">
+                        <img src="imagenes_subidas/'.$resultado['imagen'].'" class="card-img-top" alt="'.$resultado['titulo'].'" style="max-width: 70%; height: 70%;">
+                        <div class="card-body">
                             <h2 class="card-title">'.$resultado['titulo'].'</h2>
-                        <h2 class="card-text">'.substr($resultado['copete'],0,100).'</h2>
-                        <p class="card-text">'.substr($resultado['copete'],0,500).'</p>
-                        <a href="javascript:history.back()" class="btn btn-primary">Volver</a>
-                    </div>
-                 </div>
-            </div>
-
-
+                            <h2 class="card-text">'.substr($resultado['copete'],0,100).'</h2>
+                            <p class="card-text">'.substr($resultado['copete'],0,500).'</p>
+                            <a href="javascript:history.back()" class="btn btn-primary">Volver</a>
+                        </div>
+                     </div>
+                </div>
             ');
+            
         // }
         mysqli_close($conexion);
         ?>

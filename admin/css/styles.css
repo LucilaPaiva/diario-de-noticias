@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
     padding: 4%;
     margin:1%;
-    
+    border-radius: 10px;
 }
 
 .my-titulo{
@@ -61,6 +61,7 @@ body {
     background-position: center;
     /* background-repeat: no-repeat;
     padding: 30px;  */
+
 }
 
 
@@ -68,6 +69,8 @@ body {
 .form-label {
     font-weight: bold;
 }
+
+
 
 
 /* @media (min-width: 200px) and (max-width: 570px){

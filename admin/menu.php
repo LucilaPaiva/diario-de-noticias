@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link href="lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/styles2.css"> 
+    <link rel="stylesheet" type="text/css" href="css/footerstyles.css">
 
     
 

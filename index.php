@@ -5,10 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <link rel="icon" type="image/png" href="./assets/img/icons8-adjuntar-curriculum-vitae-femenino-50.png">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
     <link href="lib/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="admin/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="admin/css/footerstyles.css">
 
-    
+
 
 </head>
 
@@ -35,7 +45,8 @@
                         <a class="nav-link" href="https://www.elmundo.es/deportes.html">El mundo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.infobae.com/america/agencias/2023/10/21/ilic-dice-que-chile-es-el-punto-de-encuentro-de-las-americas-con-los-panamericanos-2023/">Competencias</a>
+                        <a class="nav-link"
+                            href="https://www.infobae.com/america/agencias/2023/10/21/ilic-dice-que-chile-es-el-punto-de-encuentro-de-las-americas-con-los-panamericanos-2023/">Competencias</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true">Actualidad</a>
@@ -63,7 +74,7 @@
             for ($i = 0; $i < $nfilas; $i++) {
                 $resultado = mysqli_fetch_array($consulta);
                 print('
-            <div class="col-4">
+            <div class="col-4 mb-4">
                 <div class="card">
                 <img src="imagenes_subidas/' . $resultado['imagen'] . '" class="card-img-top" alt="' . $resultado['titulo'] . '">
                     <div class="card-body">
@@ -74,15 +85,45 @@
                  </div>
             </div>
 
-        
-
             ');
             }
             mysqli_close($conexion);
             ?>
         </div>
     </div>
-        <script src="lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer-->
+    <footer title="Footer">
+        <div class="social-media-footer">
+            <ul class="social-media-footer-list">
+                <li class="social-media-footer-enlaces">
+                    <a aria-label="Boton a whatsapp" title="Boton a whatsapp" href="https://wa.me/+1135256303"
+                        target="_blank" rel="noopener noreferrer" class="icono-final"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </li>
+                <li class="social-media-footer-enlaces">
+                    <a aria-label="Boton a Github" title="Boton a Github" href="https://github.com/LucilaPaiva"
+                        target="_blank" rel="noopener noreferrer" class="icono-final"><i
+                            class="fa-brands fa-github-alt"></i></a>
+                </li>
+                <li class="social-media-footer-enlaces">
+                    <a aria-label="Boton a Linkedin" title="Boton a Linkedin"
+                        href="https://www.linkedin.com/in/lucila-paiva/" target="_blank" rel="noopener noreferrer"
+                        class="icono-final"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="social-media-footer-enlaces">
+                    <a aria-label="Boton a mail" title="Boton a mail" href="mailto:lucil.paiva@gmail.com"
+                        target="_blank" rel="noopener noreferrer" class="icono-final"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="final-love-container">
+            <p class="final-love">Hecho por Lucila Paiva</p>
+        </div>
+    </footer>
+
+    <script src="lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
