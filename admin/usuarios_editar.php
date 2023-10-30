@@ -67,7 +67,7 @@ if (!isset($_SESSION['usuario_logueado']))
             </div>
             <!-- Campo oculto -->
                 <input type="hidden" name="id_usuario" value="<?= $resultado['id_usuario'];?>">
-                <?php print($resultado['id_usuario']);?>
+                <!-- <?php print($resultado['id_usuario']);?> -->
             <div class="mb-3">
                 <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="Guardar">
 

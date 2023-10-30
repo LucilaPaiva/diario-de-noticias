@@ -60,23 +60,35 @@ if (!isset($_SESSION['usuario_logueado']))
         // El caso comentado es para que cada usuario edite su propia noticia
         $consulta = mysqli_query($conexion, $instruccion) or die("no pudo consultar");
         $nfilas = mysqli_num_rows($consulta);
-        for ($i = 0; $i < $nfilas; $i++) {
-            $resultado = mysqli_fetch_array($consulta);
-            $inst2 = "select * from usuarios where id_usuario=" . $resultado['id_usuario'];
-            $consulta2 = mysqli_query($conexion, $inst2) or die("no puedo consultar");
-            $autor = mysqli_fetch_array($consulta2);
-            print('
-                <tr>
-                    <td>' . trim($resultado['titulo']) . '</td>
-                    <td>' . $resultado['fecha'] . '</td>
-                    <td>' . $autor['nombre'] . ' ' . $autor['apellido'] . '</td>
-                    <td>' . substr($resultado['copete'], 0, 50) . '...</td>
-                    <td><a href="noticias_editar.php?id_noticia=' . $resultado['id_noticia'] . '" class="btn btn-secondary">editar</a></td>
-                    <td><a href="noticias_borrar.php?id_noticia=' . $resultado['id_noticia'] . '&imagen=' . $resultado['imagen'] . '" class="btn btn-danger" onclick="return confirm(&quot; Desea eliminar &quot;)">borrar<a/></td>
-                </tr>
-                
-                ');
-        }
+        // ...
+for ($i = 0; $i < $nfilas; $i++) {
+    $resultado = mysqli_fetch_array($consulta);
+    $inst2 = "select * from usuarios where id_usuario=" . $resultado['id_usuario'];
+    $consulta2 = mysqli_query($conexion, $inst2) or die("no puedo consultar");
+    $autor = mysqli_fetch_array($consulta2);
+    
+    print('
+        <tr>
+            <td>' . trim($resultado['titulo']) . '</td>
+            <td>' . $resultado['fecha'] . '</td>');
+
+    // Agregamos el bloque if para verificar si $autor está definido
+    if ($autor && isset($autor['nombre']) && isset($autor['apellido'])) {
+        print('<td>' . $autor['nombre'] . ' ' . $autor['apellido'] . '</td>');
+    } else {
+        print('<td>Autor Desconocido</td>');
+    }
+
+    print('
+            <td>' . substr($resultado['copete'], 0, 50) . '...</td>
+            <td><a href="noticias_editar.php?id_noticia=' . $resultado['id_noticia'] . '" class="btn btn-secondary">editar</a></td>
+            <td><a href="noticias_borrar.php?id_noticia=' . $resultado['id_noticia'] . '&imagen=' . $resultado['imagen'] . '" class="btn btn-danger" onclick="return confirm(&quot; Desea eliminar &quot;)">borrar<a/></td>
+        </tr>
+        
+        ');
+}
+// ...
+
         mysqli_close($conexion);
         ?>
     </table>
