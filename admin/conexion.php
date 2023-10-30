@@ -12,6 +12,11 @@
 //$password_db = "Fanymar1987.";
 //$base_db = "id21392048_notifauna_bd";
 
+//$server_db = "localhost";
+//$usuario_db = "id21465226_lucila";
+//$password_db = "Noticias123#";
+//$base_db = "id21465226_diariodb";
+
 ?> -->
 <!-- entras al wwwhost,
 en la portada sitio, abajo hay dos botones, apretar administrar -->
