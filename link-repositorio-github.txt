@@ -1,1 +1,5 @@
 https://github.com/LucilaPaiva/diario-de-noticias
+Usuarios para desde /admin/ para poder loguearse:
+1) coni, contraseña: coni
+2) Lu, contraseña: lucila
+3) Maria, contraseña: maria
